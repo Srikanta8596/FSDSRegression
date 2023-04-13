@@ -19,7 +19,7 @@ class DataIngestionconfig:
 class DataIngestion:
     def __init__(self):
         self.ingestion_config = DataIngestionconfig()
-    def initate_data_ingestion(self):
+    def initiate_data_ingestion(self):
         logging.info('Data Ingestion methods start')
         try:
             df=pd.read_csv(os.path.join('notebook/data','gemstone.csv'))
@@ -41,7 +41,7 @@ class DataIngestion:
   
         except Exception as e:
             logging.info('Exception occurs at Data Ingestion stage')
-            raise CustomerException(e,sys)
+            raise CustomException(e,sys)
 
 ## run the Data ingestion
 # if __name__=='__main__':
